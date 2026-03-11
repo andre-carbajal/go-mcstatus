@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"gomcstatus"
+	"github.com/andre-carbajal/go-mcstatus"
 )
 
 func main() {
@@ -16,19 +16,19 @@ func main() {
 
 	args := flag.Args()
 	if len(args) < 1 {
-		fmt.Println("Usage: gomcstatus [--bedrock] [--ping] <address>")
+		fmt.Println("Usage: mcstatus [--bedrock] [--ping] <address>")
 		os.Exit(1)
 	}
 
 	address := args[0]
 
-	var server gomcstat.Server
+	var server mcstatus.Server
 	var err error
 
 	if *bedrock {
-		server, err = gomcstat.NewBedrockServer(address)
+		server, err = mcstatus.NewBedrockServer(address)
 	} else {
-		server, err = gomcstat.NewJavaServer(address)
+		server, err = mcstatus.NewJavaServer(address)
 	}
 
 	if err != nil {

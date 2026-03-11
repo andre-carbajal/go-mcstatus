@@ -1,4 +1,4 @@
-package gomcstat
+package mcstatus
 
 type Server interface {
 	Status() (StatusResponse, error)

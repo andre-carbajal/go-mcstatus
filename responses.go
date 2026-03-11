@@ -1,4 +1,4 @@
-package gomcstat
+package mcstatus
 
 type JavaStatusResponse struct {
 	Version            JavaVersion `json:"version"`

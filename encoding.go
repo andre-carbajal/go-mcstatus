@@ -1,4 +1,4 @@
-package gomcstat
+package mcstatus
 
 import (
 	"bytes"
